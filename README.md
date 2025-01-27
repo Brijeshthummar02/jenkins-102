@@ -18,14 +18,14 @@ This guide provides steps to set up Jenkins BlueOcean using Docker, with minimal
 **Option A: Build the image locally**
 
 ```bash
-docker build -t myjenkins-blueocean:2.479.3 .
+docker build -t myjenkins-blueocean:2.489-jdk17 .
 ```
 
 **Option B: Pull a pre-built image**
 
 ```bash
-docker pull devopsjourney1/jenkins-blueocean:2.332.3-1
-docker tag devopsjourney1/jenkins-blueocean:2.332.3-1 myjenkins-blueocean:2.332.3-1
+docker pull jenkins/jenkins:2.489-jdk17
+docker tag jenkins/jenkins:2.489-jdk17 myjenkins-blueocean:2.489-jdk17
 ```
 
 ---
@@ -49,19 +49,19 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --publish 8080:8080 --publish 50000:50000 \
   --volume jenkins-data:/var/jenkins_home \
   --volume jenkins-docker-certs:/certs/client:ro \
-  myjenkins-blueocean:2.479.3
+  myjenkins-blueocean:2.489-jdk17
 ```
 
 #### For Windows
 
 ```powershell
-docker run --name jenkins-blueocean --restart=on-failure --detach `
-  --network jenkins --env DOCKER_HOST=tcp://docker:2376 `
-  --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 `
-  --publish 8080:8080 --publish 50000:50000 `
-  --volume jenkins-data:/var/jenkins_home `
-  --volume jenkins-docker-certs:/certs/client:ro `
-  myjenkins-blueocean:2.479.3
+docker run --name jenkins-blueocean --restart=on-failure --detach ` 
+  --network jenkins --env DOCKER_HOST=tcp://docker:2376 ` 
+  --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 ` 
+  --publish 8080:8080 --publish 50000:50000 ` 
+  --volume jenkins-data:/var/jenkins_home ` 
+  --volume jenkins-docker-certs:/certs/client:ro ` 
+  myjenkins-blueocean:2.489-jdk17
 ```
 
 ---
