@@ -18,7 +18,7 @@ This guide provides steps to set up Jenkins BlueOcean using Docker, with minimal
 **Option A: Build the image locally**
 
 ```bash
-docker build -t myjenkins-blueocean:2.414.2 .
+docker build -t myjenkins-blueocean:2.479.3 .
 ```
 
 **Option B: Pull a pre-built image**
