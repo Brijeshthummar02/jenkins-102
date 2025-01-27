@@ -49,7 +49,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --publish 8080:8080 --publish 50000:50000 \
   --volume jenkins-data:/var/jenkins_home \
   --volume jenkins-docker-certs:/certs/client:ro \
-  myjenkins-blueocean:2.414.2
+  myjenkins-blueocean:2.479.3
 ```
 
 #### For Windows
@@ -61,7 +61,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach `
   --publish 8080:8080 --publish 50000:50000 `
   --volume jenkins-data:/var/jenkins_home `
   --volume jenkins-docker-certs:/certs/client:ro `
-  myjenkins-blueocean:2.414.2
+  myjenkins-blueocean:2.479.3
 ```
 
 ---
